@@ -34,8 +34,8 @@ EOF
 
 #dar permiso para ejecutar los scripts
 sudo chmod +x /usr/local/bin/update_system.sh
-sudo chmod 666 /usr/local/bin/clear_cache.sh
-sudo chmod +x /usr/local/bin/update_system.log
+sudo chmod +x /usr/local/bin/clear_cache.sh
+sudo chmod 666 /usr/local/bin/update_system.log
 sudo chmod 666 /usr/local/bin/clear_cache.log
 
 #configurar cron jobs para root
