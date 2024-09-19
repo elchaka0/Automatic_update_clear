@@ -40,4 +40,4 @@ sudo chmod +x /usr/local/bin/clear_cache.sh
 
 #configurar cron jobs para root
 (sudo crontab -l 2>/dev/null; echo "*/5 * * * * /usr/local/bin/clear_cache.sh") | sudo crontab -
-(sudo crontab -l 2>/dev/null; echo "0 0,12* * * /usr/local/bin/update_system.sh") | sudo crontab -
+(sudo crontab -l 2>/dev/null; echo "0 0,12 * * * /usr/local/bin/update_system.sh") | sudo crontab -
