@@ -35,6 +35,9 @@ EOF
 #dar permiso para ejecutar los scripts
 sudo chmod +x /usr/local/bin/update_system.sh
 sudo chmod +x /usr/local/bin/clear_cache.sh
+
+sudo touch /usr/local/bin/update_system.log
+sudo touch /usr/local/bin/clear_cache.log
 sudo chmod 666 /usr/local/bin/update_system.log
 sudo chmod 666 /usr/local/bin/clear_cache.log
 
