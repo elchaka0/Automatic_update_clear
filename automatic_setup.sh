@@ -13,7 +13,7 @@ sudo tee /usr/local/bin/update_system.sh > /dev/null << 'EOF'
 sudo apt update && sudo apt upgrade -y
 
 #crea y avisa en update_system.log caundo se actualizo el sistema
-echo "sistema actualizado a las $(date)" >> /usr/local/bin/update_system.log
+sudo echo "sistema actualizado a las $(date)" >> /usr/local/bin/update_system.log
 EOF
 
 
@@ -27,7 +27,7 @@ sudo sync
 sudo sysctl -w vm.drop_caches=3
 
 #crea y avisa en clear_cache.log cuando se limpio la memoria cache
-echo "memoria liberada a las $(date)" >> /usr/local/bin/clear_cache.log
+sudo echo "memoria liberada a las $(date)" >> /usr/local/bin/clear_cache.log
 EOF
 
 
@@ -35,8 +35,8 @@ EOF
 #dar permiso para ejecutar los scripts
 sudo chmod +x /usr/local/bin/update_system.sh
 sudo chmod +x /usr/local/bin/clear_cache.sh
-
-
+sudo chmod +x /usr/local/bin/update_system.log
+sudo chmod +x /usr/local/bin/clear_cache.log
 
 #configurar cron jobs para root
 (sudo crontab -l 2>/dev/null; echo "*/5 * * * * /usr/local/bin/clear_cache.sh") | sudo crontab -
